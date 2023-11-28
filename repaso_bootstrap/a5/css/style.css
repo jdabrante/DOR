@@ -1,0 +1,15 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.blue{
+    background-color: lightblue;
+}
+
+.btn {
+    background-color: lightblue;
+}
+
+.btn:hover {
+    background-color: rgb(103, 185, 212);
+}

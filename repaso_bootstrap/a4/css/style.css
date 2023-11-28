@@ -1,0 +1,72 @@
+.green {
+    background-color: lightgreen;
+}
+
+.blue {
+    background-color: lightblue;
+}
+
+.one, .two, .three {
+    background-color: lightcoral;
+    height: 400px;
+    font-size: 80px;
+    text-align: center;
+}
+
+.yellow {
+    background-color: lightgoldenrodyellow;
+}
+
+.left {
+    text-align: end;
+}
+
+@media (max-width: 768px) {
+    .three {
+        background-color: lightgreen;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .one, .two {
+        height: 150px;
+        display: flex;
+        align-items: center;
+    }
+
+    .one {
+        justify-content: start;
+    }
+
+    .two {
+        justify-content: end;
+    }
+
+    .left, .right {
+        text-align: center;
+    }
+
+    .green {
+        background-color: lightblue;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .green {
+        background-color: lightcoral;
+        text-align: center;
+    }
+
+    .two {
+        background-color: lightblue;
+        justify-content: center;
+    }
+
+    .three {
+        justify-content: end;
+        background-color: lightcoral;
+    }
+}

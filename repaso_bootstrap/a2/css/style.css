@@ -1,0 +1,27 @@
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+    height: 100%;
+}
+
+.pink {
+    background-color: pink;
+    height: 50px;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.blue {
+    background-color: blue;
+}
+
+@media (max-width: 576px) {
+    .red {
+        height: 50px;
+    }
+}
