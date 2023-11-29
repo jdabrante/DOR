@@ -1,0 +1,57 @@
+$military-green: #088178;
+
+.product-section {
+    & .pro-collection {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 0 60px;
+    }
+    & h1, & p {
+      text-align: center;
+    }
+    & .product-cart {
+      width: 280px;
+      border: 1px solid #ebebeb;
+      padding: 13px;
+      margin-bottom: 30px;
+      border-radius: 25px;
+      position: relative;
+      $shadow-position: 20px 20px 30px;
+      box-shadow: $shadow-position rgba(0, 0, 0, 0.02);
+      transition: box-shadow 0.2s;
+      &:hover {
+        box-shadow: $shadow-position rgba(0, 0, 0, 0.06);
+      }
+      & img {
+        width: 100%;
+        border-radius: 25px;
+      }
+      & span {
+        color: #969696;
+        font-weight: 500;
+        line-height: 30px;
+      }
+      & h4 {
+        font-size: 18px;
+        color: rgb(41, 41, 41);
+      }
+      & .stars {
+        color: #e6ae2c;
+        padding: 6px 0;
+      }
+      & .price {
+        color: $military-green;
+        padding: 4px 0;
+      }
+      & .buy-icon {
+        color: $military-green;
+        background-color: #c7e9e75e;
+        padding: 15px;
+        border-radius: 50px;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+      }
+    }
+  }

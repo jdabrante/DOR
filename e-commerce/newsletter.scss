@@ -1,0 +1,62 @@
+@mixin fill($attributes, $value) {
+  @each $attribute in $attributes {
+    #{$attribute}: $value;
+  }
+}
+
+$military-green: #088178;
+
+#newsletter {
+    background: {
+      image:  url(images/banner/b14.png);
+      repeat: no-repeat;
+      position: 180px;
+      color: #041e42;
+    }
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 75px;
+    & .newsletter-text {
+      & h3 {
+        color: white;
+        font-size: 30px;
+        padding: 0 0 15px 0;
+      }
+      & h5 {
+        color: rgb(151, 151, 151);
+        font-size: 17px;
+        & span {
+          color: rgb(216, 182, 29);
+        }
+      }
+    }
+    & .form {
+      & input {
+        padding: 20px;
+        width: 350px;
+        height: 56px;
+        background-color: #d1d0d0;
+        border-radius: 6px 0 0 6px;
+        font-size: 18px;
+        $attributes: (border, outline);
+        @include fill($attributes, none);
+        margin-right: -4px;
+        margin-top: 1px;
+      }
+      & button {
+          margin-left: 0;
+    padding: 20px;
+    border: none;
+    width: 120px;
+    background-color: $military-green;
+    color: white;
+    font-size: 17px;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+      }
+    }
+  }
+
+  

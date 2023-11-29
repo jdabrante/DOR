@@ -1,0 +1,53 @@
+@mixin fill($attributes, $value) {
+  @each $attribute in $attributes {
+    #{$attribute}: $value;
+  }
+}
+$background-image: url(images/hero4.png);
+$military-green: #088178;
+
+#hero {
+    background: {
+      image: $background-image;
+      size: cover;
+    }
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 80px;
+  }
+  
+  #hero {
+    & h1 {
+      color: $military-green;
+    }
+    & h1, & h2 {
+      font-size: 70px;
+    }
+    & h4 {
+      padding-bottom: 15px;
+      font-size: 40px;
+    }
+    & button {
+      background: {
+        color: transparent;
+        image: url(images/button.png);
+        repeat: no-repeat;
+        size: cover;
+      };
+      width: 260px;
+      height: 60px;
+      border: 0;
+      cursor: pointer;
+      font: {
+        size: 20px;
+        weight: 700;
+      }
+      color: $military-green;
+      padding: 14px 65px 14px 65px;
+    }
+  }
+

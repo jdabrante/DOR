@@ -1,0 +1,35 @@
+@mixin fill($attributes, $value) {
+  @each $attribute in $attributes {
+    #{$attribute}: $value;
+  }
+}
+
+$military-green: #088178;
+
+@mixin display($display, $align-i, $justify-c, ){
+  display: $display;
+  align-items: $align-i;
+  justify-content: $justify-c;
+}
+
+#footer{
+    @include display(flex, flex-start, space-between);
+    padding: 75px;
+    background-color: #ececec;
+    & p, & a {
+      color: rgb(109, 109, 109);
+      text-decoration: none;
+    }
+    & a:hover {
+      color:$military-green;
+    }
+    & .about a, & .myaccount a {
+      display: block;
+      padding:8px 0;
+    }
+    & .download {
+      border: 1px solid #08817969;
+      border-radius: 7px;
+    }
+  }
+  

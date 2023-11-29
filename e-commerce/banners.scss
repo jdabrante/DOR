@@ -1,0 +1,93 @@
+@mixin fill($attributes, $value) {
+  @each $attribute in $attributes {
+    #{$attribute}: $value;
+  }
+}
+
+$military-green: #088178;
+
+@mixin display($display, $align-i, $justify-c, ){
+  display: $display;
+  align-items: $align-i;
+  justify-content: $justify-c;
+}
+
+#banners {
+    margin: 0 60px;
+    & h2, & h4, & span {
+      color: rgb(248, 248, 248);
+    }
+    & .big-banners {
+      display: flex;
+      $attributes: (align-items, justify-content);
+      @include fill($attributes, center);
+      & div {
+        min-width: 580px;
+        margin: 15px;
+        height: 300px;
+        @include display(flex, flex-start, center);
+        flex-direction: column;
+        padding: 25px;
+        background-size: cover;
+        backdrop-filter: blur(8%);
+        &:hover button {
+          background-color: $military-green;
+          border: 1px solid $military-green;
+        }
+      }
+      & button {
+        margin-top: 20px;
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: 500;
+        background-color: transparent;
+        color: rgb(248, 248, 248);
+        border: 1px solid rgb(248, 248, 248);
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+      &-1 {
+        background-image: url(images/banner/b17.jpg);
+      }
+      &-2 {
+        background-image: url(images/banner/b10.jpg);
+      }
+    }
+    & .small-banners {
+      display: flex;
+      $attributes: (align-items, justify-content);
+      @include fill($attributes, center);
+      @for $i from 1 through 3 {
+        @if (#{$i} == 1) {
+          &-#{$i} {
+            background-image: url(images/banner/b7.jpg);
+          }
+        } @else if (#{$i} == 2) {
+          &-#{$i} {
+            background-image: url(images/banner/b4.jpg);
+          }
+        } @else if (#{$i} == 3) {
+          &-#{$i} {
+            background-image: url(images/banner/b18.jpg);
+          }
+        }
+ 
+        
+      & div {
+        min-width: 370px;
+        height: 200px;
+        margin: 15px;
+        @include display(flex, flex-start, center);
+        flex-direction: column;
+        padding: 25px;
+        background-size: cover;
+      }
+      & h2 {
+        font-size: 25px;
+      }
+      & h5 {
+        color: #771818;
+      }
+    }
+  }
+}

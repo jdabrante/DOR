@@ -1,0 +1,67 @@
+
+$header-color: #222;
+$color-white: #fff;
+$military-green: #088178;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+  }
+  
+  
+  h1, h2, h4 {
+    color: $header-color;
+  }
+  
+  $headers: ("h1": 50px, "h2": 46px, "h4": 20px, "h6": 12px);
+  
+  @each $header, $size in $headers {
+    #{$header} {
+      font-size: $size;
+      @if $header == "h1" {
+        line-height: 64px;
+      } @else if $header == "h2" {
+        line-height: 54px;
+      } @else if $header == "h6" {
+        font-weight: 700;
+      }
+    }
+  }
+  
+  
+  p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+  }
+  
+  .section {
+    &-p1 , &-m1 {
+      padding: 40px 0;
+    }
+  }
+  
+  button.normal {
+    font: {
+      size: 14px;
+      weight: 600px;
+    }
+    padding: 15px 30px;
+    color: #000;
+    background-color: $color-white;
+    border: none {
+      radius: 4px;
+    }
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s;
+    &:hover {
+      background-color: $military-green;
+      color: $color-white;
+    }
+  }
+  
+  body {
+    width: 100%;
+  }
