@@ -1,0 +1,13 @@
+// mixins
+
+@mixin same-value($parameters, $value) {
+    @each $parameter in $parameters {
+        #{$parameter}: $value;
+    }
+}
+
+@mixin parameter-value($parameters-list-values){
+    @each $parameter, $value in $parameters-list-values {
+        #{$parameter}: #{$value};
+    }
+}
