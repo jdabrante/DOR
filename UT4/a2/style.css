@@ -1,0 +1,19 @@
+.button {
+    border: none;
+    background-color: lightblue;
+    border-radius: 10px;
+    transition: all ease 1s;
+    width: min-content;
+}
+
+.button:hover {
+    background-color: lightcoral;
+    transform:  rotatey(360deg) skew(2deg, 2deg) scale(2);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}

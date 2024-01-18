@@ -1,0 +1,12 @@
+.square {
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+    font-size: 15px;
+    transition: ease 1s;
+}
+
+.square:hover {
+    transform: rotate(150deg) skew(15deg, 15deg) scale(1);
+    
+}

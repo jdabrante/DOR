@@ -1,0 +1,15 @@
+.image {
+    transition: 0.8s;
+}
+
+img {
+    width: 500px;
+}
+
+.container:hover .image {
+    transform: translateY(100vh);
+}
+
+
+
+
