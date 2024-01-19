@@ -1,12 +1,4 @@
-@mixin fill($attributes, $value) {
-  @each $attribute in $attributes {
-    #{$attribute}: $value;
-  }
-}
-
-$military-green: #088178;
-
-
+@import 'common.scss';
 
 #off-banner {
     background: {
@@ -19,10 +11,11 @@ $military-green: #088178;
     $attributes: (align-items, justify-content);
     @include fill($attributes, center);
     flex-direction: column;
-    & h4, & h2 {
+    & h4{
       color: #eaebf0;
     }
     & h2 {
+      @extend h4;
       padding: 20px 0;
     }
   }

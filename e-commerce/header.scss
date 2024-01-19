@@ -1,20 +1,8 @@
-@mixin flex-center {
-  display: flex;
-  align-items: center;
-}
-
-@mixin fill($attributes, $value) {
-  @each $attribute in $attributes {
-    #{$attribute}: $value;
-  }
-}
-
-$military-green: #088178;
+@import 'common.scss';
 
 #header {
     $color: #e3e6f3;
-    @include flex-center();
-    justify-content: space-between;
+    @include display(flex, center, space-between);
     background-color: if($color == #e3e6f3, #e3e6f3, black);
     padding: 20px 80px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
@@ -43,7 +31,7 @@ $military-green: #088178;
       font-weight: 600;
       color: if($color == #1a1a1a, #1a1a1a, white);
       transition: 0.3s ease;
-      &:hover &.active {
+      &:hover, &.active {
         color: $military-green;
         content: "";
       }
@@ -52,7 +40,7 @@ $military-green: #088178;
       color: #1a1a1a;
       padding-left: 20px;
       transition: 0.3s ease;
-      &:hover &.active {
+      &:hover, &.active {
         color: $military-green;
         &::after {
           $content: "";

@@ -1,0 +1,46 @@
+$header-color: #222;
+$background-image: url(images/hero4.png);
+$color-white: #fff;
+$military-green: #088178;
+$black: #000;
+
+// mixins
+
+@mixin fill($attributes, $value) {
+  @each $attribute in $attributes {
+    #{$attribute}: $value;
+  }
+}
+
+@mixin display($display, $align-i, $justify-c, ){
+    display: $display;
+    align-items: $align-i;
+    justify-content: $justify-c;
+  }
+
+@mixin background-color-text-color($bg-color, $t-color) {
+    color: $t-color;
+    background-color: $bg-color;
+}
+
+@function calculate-wieght($value, $target-value, $multiply: 3) {
+    @while $value < $target-value {
+      $value: $value * $multiply;
+    }
+    @return $value
+  }
+
+@function calculate-width($value, $target-value, $multiply: 2) {
+    @while $value < $target-value {
+        $value: $value * $multiply;
+    }
+    @return $value
+}
+
+@function calculate-padding($value, $target-value, $sum-value: 3) {
+    @while $value < $target-value {
+      $value: $value + $sum-value;
+    }
+    @return $value
+  }
+  

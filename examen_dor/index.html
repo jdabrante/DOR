@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="f1" x="0" y="0">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+    </filter>
+    <filter id="f2" x="0" y="0">
+      <feOffset result="offOut" in="SourceGraphic" dx="20" dy="20"/>
+      <feBlend in="SourceGraphic" in2="offOut" mode="normal"/>
+    </filter>
+    <filter id="f3" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceAlpha" dx="20" dy="20"/>
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10"/>
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
+    </filter>
+  </defs>
+    <!-- <line x1="0" y1="0" x2="200" y2="200" style="stroke:red; stroke-width:3;"/> -->
+    <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" filter="url(#f3)"/>
+    <!-- <rect width="50" height="50" x="50" y="20" rx="10" ry="10" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0); opacity:0.5;"/>
+    <ellipse cx="200" cy="50" rx="50" ry="30" style="fill:red;stroke:black;stroke-width:3;opacity:0.6;"/>
+    <circle cx="75" cy="150" r="40" style="fill:red;stroke:black;stroke-width:3;opacity:0.6;"/> -->
+    <text x="0" y="15" fill="red" transform="rotate(20 -100 40)">I LOVE SVG</text>
+ </svg>
+ 
+</body>
+</html>

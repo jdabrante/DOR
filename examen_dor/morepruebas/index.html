@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <svg width="500" height="200">
+        <symbol id="circle">
+            <circle cx="5" cy="100" r="5" fill="green"/>
+        </symbol>
+        <symbol id="worm">
+            <use xlink:href="#circle" x="0">
+                <animate  acumulate="sum" attributeName="y" values="0;-5;0" begin="a6.end" dur="1s" repeatCount="indefinite"/>
+            </use>
+            <use xlink:href="#circle" x="5">
+                <animate acumulate="sum" id="a6" attributeName="y" values="0;-5;0" begin="a5.end" dur="1s" repeatCount="indefinite"/>
+            </use>
+            <use xlink:href="#circle" x="10">
+                <animate acumulate="sum" id="a5" attributeName="y" values="0;-5;0" begin="a4.end" dur="1s" repeatCount="indefinite"/>
+            </use>
+            <use xlink:href="#circle" x="15">
+                <animate acumulate="sum" id="a4" attributeName="y" values="0;-5;0" begin="a3.end" dur="1s" repeatCount="indefinite"/>
+            </use>
+            <use xlink:href="#circle" x="20">
+                <animate acumulate="sum" id="a3" attributeName="y" values="0;-5;0" begin="a2.end" dur="1s" repeatCount="indefinite"/>
+            </use>
+            <use xlink:href="#circle" x="25">
+                <animate acumulate="sum" id="a2" attributeName="y" values="0;-5;0" begin="a1.end" dur="1s" repeatCount="indefinite">
+            </use>
+            <use xlink:href="#circle" x="17" y="-35" transform="scale(1.5)">
+                <animate acumulate="sum" id="a1" attributeName="y" values="-35;-40;-35" dur="1s" repeatCount="indefinite"/>
+            </use>
+        </symbol>
+        <use xlink:href="#worm">
+            <animateMotion path="M 0 0 L 100 0"  dur="10s" repeatCount="1" fill="freeze">
+        </use>
+
+
+            
+    </svg> -->
+    <svg width="500" height="200">
+        <symbol id="circle">
+          <circle cx="5" cy="100" r="5" fill="green"/>
+        </symbol>
+      
+        <symbol id="worm">
+          <use xlink:href="#circle" x="0">
+            <animate attributeName="y" values="0;-5;0" begin="a6.end" dur="1s" accumulate="sum" repeatCount="indefinite"/>
+          </use>
+          <use xlink:href="#circle" x="5">
+            <animate id="a6" attributeName="y" values="0;-5;0" begin="a5.end" dur="1s" accumulate="sum" repeatCount="indefinite"/>
+          </use>
+          <use xlink:href="#circle" x="10">
+            <animate id="a5" attributeName="y" values="0;-5;0" begin="a4.end" dur="1s" accumulate="sum" repeatCount="indefinite"/>
+          </use>
+          <use xlink:href="#circle" x="15">
+            <animate id="a4" attributeName="y" values="0;-5;0" begin="a3.end" dur="1s" accumulate="sum" repeatCount="indefinite"/>
+          </use>
+          <use xlink:href="#circle" x="20">
+            <animate id="a3" attributeName="y" values="0;-5;0" begin="a2.end" dur="1s" accumulate="sum" repeatCount="indefinite"/>
+          </use>
+          <use xlink:href="#circle" x="25">
+            <animate id="a2" attributeName="y" values="0;-5;0" begin="a1.end" dur="1s" accumulate="sum" repeatCount="indefinite"/>
+          </use>
+          <use xlink:href="#circle" x="17" y="-35" transform="scale(1.5)">
+            <animate id="a1" attributeName="y" values="-35;-40;-35" dur="1s" repeatCount="indefinite"/>
+          </use>
+        </symbol>
+      
+        <use xlink:href="#worm">
+          <animateMotion path="M 0 0 L 100 0" dur="10s" repeatCount="indefinite" fill="freeze"/>
+        </use>
+      </svg>
+      
+</body>
+</html>

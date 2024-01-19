@@ -1,16 +1,4 @@
-@mixin fill($attributes, $value) {
-  @each $attribute in $attributes {
-    #{$attribute}: $value;
-  }
-}
-
-$military-green: #088178;
-
-@mixin display($display, $align-i, $justify-c, ){
-  display: $display;
-  align-items: $align-i;
-  justify-content: $justify-c;
-}
+@import 'common.scss';
 
 #banners {
     margin: 0 60px;
@@ -40,8 +28,7 @@ $military-green: #088178;
         padding: 12px 20px;
         font-size: 16px;
         font-weight: 500;
-        background-color: transparent;
-        color: rgb(248, 248, 248);
+        @include background-color-text-color(transparent,  rgb(248, 248, 248));
         border: 1px solid rgb(248, 248, 248);
         cursor: pointer;
         transition: 0.3s ease;
@@ -82,12 +69,17 @@ $military-green: #088178;
         padding: 25px;
         background-size: cover;
       }
-      & h2 {
-        font-size: 25px;
-      }
-      & h5 {
-        color: #771818;
+      @for $i from 1 through 5 {
+        @if ($i == 2) {
+          & h#{$i} {
+            font-size: 25px;
+          } 
+        } @else if ($i == 5) {
+            & h#{$i} {
+              color: #771818;
+            }
+          }
+        }
       }
     }
   }
-}

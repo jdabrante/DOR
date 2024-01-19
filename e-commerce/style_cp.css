@@ -8,7 +8,7 @@
   font-family: "League Spartan", sans-serif;
 }
 
-h1, h2, h4 {
+h1, h2, #hero h1, h4, #off-banner h2 {
   color: #222;
 }
 
@@ -17,12 +17,12 @@ h1 {
   line-height: 64px;
 }
 
-h2 {
+h2, #hero h1 {
   font-size: 46px;
   line-height: 54px;
 }
 
-h4 {
+h4, #off-banner h2, #off-banner #hero h1, #hero #off-banner h1 {
   font-size: 20px;
 }
 
@@ -97,7 +97,7 @@ body {
   color: #1a1a1a;
   transition: 0.3s ease;
 }
-.header-list-nav ul a:hover .header-list-nav ul a.active {
+.header-list-nav ul a:hover, .header-list-nav ul a.active {
   color: #088178;
   content: "";
 }
@@ -106,10 +106,10 @@ body {
   padding-left: 20px;
   transition: 0.3s ease;
 }
-.header-list-icon a:hover .header-list-icon a.active {
+.header-list-icon a:hover, .header-list-icon a.active {
   color: #088178;
 }
-.header-list-icon a:hover .header-list-icon a.active::after {
+.header-list-icon a:hover::after, .header-list-icon a.active::after {
   content: "";
   width: 30%;
   height: 2px;
@@ -136,10 +136,10 @@ body {
 #hero h1 {
   color: #088178;
 }
-#hero h1, #hero h2 {
+#hero h2, #hero h1 {
   font-size: 70px;
 }
-#hero h4 {
+#hero h4, #hero #off-banner h2, #off-banner #hero h2, #off-banner #hero h1, #hero #off-banner h1 {
   padding-bottom: 15px;
   font-size: 40px;
 }
@@ -187,22 +187,20 @@ body {
   line-height: 1;
   font-size: 14px;
   border-radius: 4px;
-  color: #088178;
-  background-color: #fddde4;
 }
-#features:nth-child(2) {
+#features .f-box:nth-child(2) h6 {
   background-color: #cdebbc;
 }
-#features:nth-child(3) {
+#features .f-box:nth-child(3) h6 {
   background-color: #d1e8f2;
 }
-#features:nth-child(4) {
+#features .f-box:nth-child(4) h6 {
   background-color: #cdd4f8;
 }
-#features:nth-child(5) {
+#features .f-box:nth-child(5) h6 {
   background-color: #f6dbf6;
 }
-#features:nth-child(6) {
+#features .f-box:nth-child(6) h6 {
   background-color: #fff2e5;
 }
 
@@ -238,7 +236,7 @@ body {
   font-weight: 500;
   line-height: 30px;
 }
-.product-section .product-cart h4 {
+.product-section .product-cart h4, .product-section .product-cart #off-banner h2, #off-banner .product-section .product-cart h2, .product-section .product-cart #off-banner #hero h1, #off-banner #hero .product-section .product-cart h1, .product-section .product-cart #hero #off-banner h1, #hero #off-banner .product-section .product-cart h1 {
   font-size: 18px;
   color: rgb(41, 41, 41);
 }
@@ -271,10 +269,10 @@ body {
   justify-content: center;
   flex-direction: column;
 }
-#off-banner h4, #off-banner h2 {
+#off-banner h4, #off-banner h2, #off-banner #hero h1, #hero #off-banner h1 {
   color: #eaebf0;
 }
-#off-banner h2 {
+#off-banner h2, #off-banner #hero h1, #hero #off-banner h1 {
   padding: 20px 0;
 }
 
@@ -286,7 +284,7 @@ body {
 #banners {
   margin: 0 60px;
 }
-#banners h2, #banners h4, #banners span {
+#banners h2, #banners #hero h1, #hero #banners h1, #banners h4, #banners span {
   color: rgb(248, 248, 248);
 }
 #banners .big-banners {
@@ -299,9 +297,9 @@ body {
   margin: 15px;
   height: 300px;
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  flex-direction: column;
   padding: 25px;
   background-size: cover;
   -webkit-backdrop-filter: blur(8%);
@@ -316,8 +314,8 @@ body {
   padding: 12px 20px;
   font-size: 16px;
   font-weight: 500;
-  background-color: transparent;
   color: rgb(248, 248, 248);
+  background-color: transparent;
   border: 1px solid rgb(248, 248, 248);
   cursor: pointer;
   transition: 0.3s ease;
@@ -333,27 +331,52 @@ body {
   align-items: center;
   justify-content: center;
 }
-#banners .small-banners-1 {
-  background-image: url(images/banner/b7.jpg);
+#banners .small-banners div {
+  min-width: 370px;
+  height: 200px;
+  margin: 15px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 25px;
+  background-size: cover;
 }
-#banners .small-banners-2 {
-  background-image: url(images/banner/b4.jpg);
+#banners .small-banners h2, #banners .small-banners #hero h1, #hero #banners .small-banners h1 {
+  font-size: 25px;
 }
-#banners .small-banners-3 {
-  background-image: url(images/banner/b18.jpg);
+#banners .small-banners h5 {
+  color: #771818;
 }
 #banners .small-banners div {
   min-width: 370px;
   height: 200px;
   margin: 15px;
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  flex-direction: column;
   padding: 25px;
   background-size: cover;
 }
-#banners .small-banners h2 {
+#banners .small-banners h2, #banners .small-banners #hero h1, #hero #banners .small-banners h1 {
+  font-size: 25px;
+}
+#banners .small-banners h5 {
+  color: #771818;
+}
+#banners .small-banners div {
+  min-width: 370px;
+  height: 200px;
+  margin: 15px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 25px;
+  background-size: cover;
+}
+#banners .small-banners h2, #banners .small-banners #hero h1, #hero #banners .small-banners h1 {
   font-size: 25px;
 }
 #banners .small-banners h5 {

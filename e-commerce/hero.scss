@@ -1,10 +1,4 @@
-@mixin fill($attributes, $value) {
-  @each $attribute in $attributes {
-    #{$attribute}: $value;
-  }
-}
-$background-image: url(images/hero4.png);
-$military-green: #088178;
+@import 'common.scss';
 
 #hero {
     background: {
@@ -22,9 +16,10 @@ $military-green: #088178;
   
   #hero {
     & h1 {
+      @extend h2;
       color: $military-green;
     }
-    & h1, & h2 {
+    & h2 {
       font-size: 70px;
     }
     & h4 {

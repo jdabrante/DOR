@@ -32,7 +32,7 @@
   color: #1a1a1a;
   transition: 0.3s ease;
 }
-.header-list-nav ul a:hover .header-list-nav ul a.active {
+.header-list-nav ul a:hover, .header-list-nav ul a.active {
   color: #088178;
   content: "";
 }
@@ -41,10 +41,10 @@
   padding-left: 20px;
   transition: 0.3s ease;
 }
-.header-list-icon a:hover .header-list-icon a.active {
+.header-list-icon a:hover, .header-list-icon a.active {
   color: #088178;
 }
-.header-list-icon a:hover .header-list-icon a.active::after {
+.header-list-icon a:hover::after, .header-list-icon a.active::after {
   content: "";
   width: 30%;
   height: 2px;

@@ -1,10 +1,4 @@
-@mixin fill($attributes, $value) {
-  @each $attribute in $attributes {
-    #{$attribute}: $value;
-  }
-}
-
-$military-green: #088178;
+@import 'common.scss';
 
 #newsletter {
     background: {
@@ -47,14 +41,14 @@ $military-green: #088178;
       }
       & button {
           margin-left: 0;
-    padding: 20px;
-    border: none;
-    width: 120px;
-    background-color: $military-green;
-    color: white;
-    font-size: 17px;
-    border-radius: 0 6px 6px 0;
-    cursor: pointer;
+          padding: 20px;
+          border: none;
+          width: 120px;
+          background-color: $military-green;
+          color: white;
+          font-size: 17px;
+          border-radius: 0 6px 6px 0;
+          cursor: pointer;
       }
     }
   }

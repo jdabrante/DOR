@@ -1,45 +1,40 @@
-@mixin display($display, $align-i, $justify-c, ){
-  display: $display;
-  align-items: $align-i;
-  justify-content: $justify-c;
-}
-
-$military-green: #088178;
+@import 'common.scss';
 
 #features {
-    @include display(flex, center, space-around);
-    & .f-box {
-      width: 180px;
-      text-align: center;
-      padding: 25px 15px;
-      box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
-      border: 1px solid #cce7d0 {
-        radius: 4px;
-      }
-      margin: 15px 0;
-      transition: box-shadow 0.3s;
-      &:hover {
-        box-shadow: 10px 10px 54px rgba(0, 0, 0, 0.1);
-      }
-      & img {
-        width: 100%;
-        margin-bottom: 10px;
-      }
-      & h6 {
-        display: inline-block;
-        padding: 9px 8px 6px 8px;
-        line-height: 1;
-        font-size: 14px;
-        border-radius: 4px;
-        color: $military-green;
-        background-color: #fddde4;
-      }
+  @include display(flex, center, space-around);
+
+  .f-box {
+    width: calculate-width(90px, 180px);
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid #cce7d0 {
+      radius: 4px;
+    }
+    margin: 15px 0;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 10px 10px 54px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    h6 {
+      display: inline-block;
+      padding: 9px 8px 6px 8px;
+      line-height: 1;
+      font-size: 14px;
+      border-radius: 4px;
     }
     $childs: (2: #cdebbc, 3: #d1e8f2, 4: #cdd4f8, 5: #f6dbf6, 6: #fff2e5);
     @each $number, $color in $childs {
-      &:nth-child(#{$number}) {
+      &:nth-child(#{$number}) h6 {
         background-color: $color;
       }
     }
-  }
-  
+  } 
+}
